@@ -15,6 +15,9 @@
 		9CB416EB1EC06F6700D6496E /* ScoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416EA1EC06F6700D6496E /* ScoryUITests.swift */; };
 		9CB416FA1EC0712A00D6496E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB416F91EC0712A00D6496E /* ReSwift.framework */; };
 		9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417021EC0782600D6496E /* GamesListViewController.swift */; };
+		9CB417061EC07D2A00D6496E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417051EC07D2A00D6496E /* Game.swift */; };
+		9CB417081EC07D3700D6496E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417071EC07D3700D6496E /* AppState.swift */; };
+		9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4170A1EC07E2B00D6496E /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9CB416EC1EC06F6700D6496E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB416F91EC0712A00D6496E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		9CB417021EC0782600D6496E /* GamesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
+		9CB417051EC07D2A00D6496E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		9CB417071EC07D3700D6496E /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		9CB4170A1EC07E2B00D6496E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,8 @@
 		9CB416C71EC06F6700D6496E /* Scory */ = {
 			isa = PBXGroup;
 			children = (
+				9CB417091EC07D5D00D6496E /* State */,
+				9CB417041EC07D1000D6496E /* Models */,
 				9CB416C81EC06F6700D6496E /* AppDelegate.swift */,
 				9CB416CE1EC06F6700D6496E /* Main.storyboard */,
 				9CB416D11EC06F6700D6496E /* Assets.xcassets */,
@@ -135,6 +143,23 @@
 				9CB416F91EC0712A00D6496E /* ReSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CB417041EC07D1000D6496E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9CB417051EC07D2A00D6496E /* Game.swift */,
+				9CB4170A1EC07E2B00D6496E /* Player.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		9CB417091EC07D5D00D6496E /* State */ = {
+			isa = PBXGroup;
+			children = (
+				9CB417071EC07D3700D6496E /* AppState.swift */,
+			);
+			name = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +318,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */,
+				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
+				9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */,
+				9CB417081EC07D3700D6496E /* AppState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
