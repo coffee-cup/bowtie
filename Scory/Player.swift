@@ -8,10 +8,10 @@
 
 import Foundation
 
-class Player {
+struct Player {
     var id: String!
     var name: String!
-    var scores: [Int] = []
+    var scores: [Score] = []
 
     init(name: String) {
         self.name = name

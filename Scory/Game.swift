@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Game {
+struct Game {
     var id: String!
     var date: Date!
     var players: [Player] = []

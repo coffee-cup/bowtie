@@ -15,6 +15,9 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Large title
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         // Do any additional setup after loading the view.
         gamesListTableView.dataSource = self
         gamesListTableView.delegate = self
@@ -38,6 +41,10 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
+    }
+    
     // Table View Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -45,11 +52,11 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GameCell") as! GamesTableViewCell
         return cell
     }
     

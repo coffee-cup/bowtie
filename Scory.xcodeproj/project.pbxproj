@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */; };
+		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
 		9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416C81EC06F6700D6496E /* AppDelegate.swift */; };
 		9CB416D01EC06F6700D6496E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB416CE1EC06F6700D6496E /* Main.storyboard */; };
 		9CB416D21EC06F6700D6496E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CB416D11EC06F6700D6496E /* Assets.xcassets */; };
 		9CB416D51EC06F6700D6496E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB416D31EC06F6700D6496E /* LaunchScreen.storyboard */; };
 		9CB416E01EC06F6700D6496E /* ScoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416DF1EC06F6700D6496E /* ScoryTests.swift */; };
 		9CB416EB1EC06F6700D6496E /* ScoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416EA1EC06F6700D6496E /* ScoryUITests.swift */; };
-		9CB416FA1EC0712A00D6496E /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB416F91EC0712A00D6496E /* ReSwift.framework */; };
 		9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417021EC0782600D6496E /* GamesListViewController.swift */; };
 		9CB417061EC07D2A00D6496E /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417051EC07D2A00D6496E /* Game.swift */; };
-		9CB417081EC07D3700D6496E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB417071EC07D3700D6496E /* AppState.swift */; };
 		9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4170A1EC07E2B00D6496E /* Player.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9CB416C51EC06F6700D6496E /* Scory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB416C81EC06F6700D6496E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB416CF1EC06F6700D6496E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,10 +52,8 @@
 		9CB416E61EC06F6700D6496E /* ScoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoryUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB416EA1EC06F6700D6496E /* ScoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoryUITests.swift; sourceTree = "<group>"; };
 		9CB416EC1EC06F6700D6496E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9CB416F91EC0712A00D6496E /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		9CB417021EC0782600D6496E /* GamesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesListViewController.swift; sourceTree = "<group>"; };
 		9CB417051EC07D2A00D6496E /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		9CB417071EC07D3700D6496E /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		9CB4170A1EC07E2B00D6496E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CB416FA1EC0712A00D6496E /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +106,6 @@
 		9CB416C71EC06F6700D6496E /* Scory */ = {
 			isa = PBXGroup;
 			children = (
-				9CB417091EC07D5D00D6496E /* State */,
 				9CB417041EC07D1000D6496E /* Models */,
 				9CB416C81EC06F6700D6496E /* AppDelegate.swift */,
 				9CB416CE1EC06F6700D6496E /* Main.storyboard */,
@@ -115,6 +113,7 @@
 				9CB416D31EC06F6700D6496E /* LaunchScreen.storyboard */,
 				9CB416D61EC06F6700D6496E /* Info.plist */,
 				9CB417021EC0782600D6496E /* GamesListViewController.swift */,
+				9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */,
 			);
 			path = Scory;
 			sourceTree = "<group>";
@@ -140,7 +139,6 @@
 		9CB416F81EC0712A00D6496E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9CB416F91EC0712A00D6496E /* ReSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -150,16 +148,9 @@
 			children = (
 				9CB417051EC07D2A00D6496E /* Game.swift */,
 				9CB4170A1EC07E2B00D6496E /* Player.swift */,
+				9C760D681EC655F20000D3B0 /* Score.swift */,
 			);
 			name = Models;
-			sourceTree = "<group>";
-		};
-		9CB417091EC07D5D00D6496E /* State */ = {
-			isa = PBXGroup;
-			children = (
-				9CB417071EC07D3700D6496E /* AppState.swift */,
-			);
-			name = State;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,7 +217,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Jake Runzer";
 				TargetAttributes = {
 					9CB416C41EC06F6700D6496E = {
@@ -302,7 +293,6 @@
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
 			);
 			outputPaths = (
 			);
@@ -318,10 +308,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */,
+				9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */,
 				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
 				9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */,
-				9CB417081EC07D3700D6496E /* AppState.swift in Sources */,
+				9C760D691EC655F20000D3B0 /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +377,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -394,7 +387,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -437,7 +434,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -445,7 +444,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -481,6 +484,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.Scory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,6 +502,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Scory/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.Scory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,6 +587,7 @@
 				9CB416F11EC06F6700D6496E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CB416F21EC06F6700D6496E /* Build configuration list for PBXNativeTarget "ScoryTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +596,7 @@
 				9CB416F41EC06F6700D6496E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9CB416F51EC06F6700D6496E /* Build configuration list for PBXNativeTarget "ScoryUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +605,7 @@
 				9CB416F71EC06F6700D6496E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
