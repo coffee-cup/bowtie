@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */; };
+		9C0EAEBF1F416362008D4CF3 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */; };
+		9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */; };
+		9C0EAEC61F41653F008D4CF3 /* KeyboardAvoiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC41F41653E008D4CF3 /* KeyboardAvoiding.swift */; };
+		9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC51F41653E008D4CF3 /* KeyboardDismissingView.swift */; };
+		9C0EAEC91F416F7D008D4CF3 /* AddPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */; };
+		9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */; };
 		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
 		9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416C81EC06F6700D6496E /* AppDelegate.swift */; };
 		9CB416D01EC06F6700D6496E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB416CE1EC06F6700D6496E /* Main.storyboard */; };
@@ -39,6 +45,12 @@
 
 /* Begin PBXFileReference section */
 		9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
+		9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
+		9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlayersViewController.swift; sourceTree = "<group>"; };
+		9C0EAEC41F41653E008D4CF3 /* KeyboardAvoiding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardAvoiding.swift; sourceTree = "<group>"; };
+		9C0EAEC51F41653E008D4CF3 /* KeyboardDismissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissingView.swift; sourceTree = "<group>"; };
+		9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewCell.swift; sourceTree = "<group>"; };
+		9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9CB416C51EC06F6700D6496E /* Scory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB416C81EC06F6700D6496E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +94,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C0EAEBB1F415D71008D4CF3 /* IHKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EAEC41F41653E008D4CF3 /* KeyboardAvoiding.swift */,
+				9C0EAEC51F41653E008D4CF3 /* KeyboardDismissingView.swift */,
+			);
+			name = IHKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		9C0EAEC01F41636F008D4CF3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9CB417021EC0782600D6496E /* GamesListViewController.swift */,
+				9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */,
+				9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9C0EAEC31F4163D8008D4CF3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */,
+				9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		9C0EAECA1F4176FB008D4CF3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		9CB416BC1EC06F6700D6496E = {
 			isa = PBXGroup;
 			children = (
@@ -106,14 +154,16 @@
 		9CB416C71EC06F6700D6496E /* Scory */ = {
 			isa = PBXGroup;
 			children = (
-				9CB417041EC07D1000D6496E /* Models */,
-				9CB416C81EC06F6700D6496E /* AppDelegate.swift */,
-				9CB416CE1EC06F6700D6496E /* Main.storyboard */,
-				9CB416D11EC06F6700D6496E /* Assets.xcassets */,
-				9CB416D31EC06F6700D6496E /* LaunchScreen.storyboard */,
+				9C0EAECA1F4176FB008D4CF3 /* Extensions */,
 				9CB416D61EC06F6700D6496E /* Info.plist */,
-				9CB417021EC0782600D6496E /* GamesListViewController.swift */,
-				9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */,
+				9CB416C81EC06F6700D6496E /* AppDelegate.swift */,
+				9CB416D11EC06F6700D6496E /* Assets.xcassets */,
+				9C0EAEC31F4163D8008D4CF3 /* Cells */,
+				9C0EAEBB1F415D71008D4CF3 /* IHKeyboardAvoiding */,
+				9CB416D31EC06F6700D6496E /* LaunchScreen.storyboard */,
+				9CB416CE1EC06F6700D6496E /* Main.storyboard */,
+				9CB417041EC07D1000D6496E /* Models */,
+				9C0EAEC01F41636F008D4CF3 /* ViewControllers */,
 			);
 			path = Scory;
 			sourceTree = "<group>";
@@ -163,7 +213,6 @@
 				9CB416C11EC06F6700D6496E /* Sources */,
 				9CB416C21EC06F6700D6496E /* Frameworks */,
 				9CB416C31EC06F6700D6496E /* Resources */,
-				9CB416FB1EC0713F00D6496E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -286,31 +335,21 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		9CB416FB1EC0713F00D6496E /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		9CB416C11EC06F6700D6496E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0EAEC91F416F7D008D4CF3 /* AddPlayerTableViewCell.swift in Sources */,
 				9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */,
+				9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */,
+				9C0EAEC61F41653F008D4CF3 /* KeyboardAvoiding.swift in Sources */,
+				9C0EAEBF1F416362008D4CF3 /* CreateNameViewController.swift in Sources */,
 				9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */,
 				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
+				9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
+				9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */,
 				9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */,
 				9C760D691EC655F20000D3B0 /* Score.swift in Sources */,
 			);

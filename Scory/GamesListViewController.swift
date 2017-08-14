@@ -17,6 +17,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
 
         // Large title
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = UIColor.white
         
         // Do any additional setup after loading the view.
         gamesListTableView.dataSource = self
