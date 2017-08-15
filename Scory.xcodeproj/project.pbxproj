@@ -14,6 +14,7 @@
 		9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC51F41653E008D4CF3 /* KeyboardDismissingView.swift */; };
 		9C0EAEC91F416F7D008D4CF3 /* AddPlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */; };
 		9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */; };
+		9C304E291F42C19E0068752A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C304E281F42C19E0068752A /* Store.swift */; };
 		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
 		9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB416C81EC06F6700D6496E /* AppDelegate.swift */; };
 		9CB416D01EC06F6700D6496E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CB416CE1EC06F6700D6496E /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		9C0EAEC51F41653E008D4CF3 /* KeyboardDismissingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardDismissingView.swift; sourceTree = "<group>"; };
 		9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTableViewCell.swift; sourceTree = "<group>"; };
 		9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9C304E281F42C19E0068752A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		9CB416C51EC06F6700D6496E /* Scory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB416C81EC06F6700D6496E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				9CB416CE1EC06F6700D6496E /* Main.storyboard */,
 				9CB417041EC07D1000D6496E /* Models */,
 				9C0EAEC01F41636F008D4CF3 /* ViewControllers */,
+				9C304E281F42C19E0068752A /* Store.swift */,
 			);
 			path = Scory;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				9C0EAEBF1F416362008D4CF3 /* CreateNameViewController.swift in Sources */,
 				9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */,
 				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
+				9C304E291F42C19E0068752A /* Store.swift in Sources */,
 				9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
 				9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */,

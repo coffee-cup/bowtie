@@ -7,14 +7,16 @@
 //
 
 import Foundation
+import RealmSwift
 
-struct Player {
-    var id: String!
-    var name: String!
-    var scores: [Score] = []
-
-    init(name: String) {
-        self.name = name
-        self.id = UUID().uuidString
+class Player: Object {
+    dynamic var id = UUID().uuidString
+    dynamic var name = ""
+    let scores = List<Score>()
+ 
+    static func create(name: String) -> Player {
+        let player = Player()
+        player.name = name
+        return player
     }
 }

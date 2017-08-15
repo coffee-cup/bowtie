@@ -48,8 +48,7 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     @IBAction func CreateDidTouch(_ sender: Any) {
-        // Create the new game here
-        
+        let _ = Game.create(name: gameName, playerNames: players)
         navigationController?.popToRootViewController(animated: true)
     }
     

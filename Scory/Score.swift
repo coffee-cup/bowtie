@@ -7,12 +7,15 @@
 //
 
 import Foundation
+import RealmSwift
 
-enum ScoreTypes {
-    case Num
-}
-
-struct Score {
-    var type: ScoreTypes = .Num
-    var value: Int = 0
+class Score: Object {
+    dynamic var value: Int = 0
+    
+    static func create(value: Int) -> Score {
+        let score = Score()
+        score.value = value
+        
+        return score
+    }
 }
