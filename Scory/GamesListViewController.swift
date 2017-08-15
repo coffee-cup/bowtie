@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GamesListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
-    @IBOutlet weak var gamesListTableView: UITableView!
-    let games = Game.all()
+    @IBOutlet weak var tableView: UITableView!
+    
+    var notificationToken: NotificationToken!
+    var games = Game.all()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,9 +23,14 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = UIColor.white
         
+        notificationToken = Store.notifier {
+            self.games = Game.all()
+            self.tableView.reloadData()
+        }
+        
         // Do any additional setup after loading the view.
-        gamesListTableView.dataSource = self
-        gamesListTableView.delegate = self
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +42,10 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         if segue.identifier == "GameSegue" {
             
         }
+    }
+    
+    deinit {
+        notificationToken.stop()
     }
     
     // Table View Delegate

@@ -27,4 +27,10 @@ class Store {
     static func get<T: Object>(type: T.Type) -> [T] {
         return Array(realm.objects(type))
     }
+    
+    static func notifier(block: @escaping (() -> Void)) -> NotificationToken {
+        return realm.addNotificationBlock() { notification, realm in
+            block()
+        }
+    }
 }
