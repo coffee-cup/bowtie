@@ -11,6 +11,7 @@ import UIKit
 class CreateNameViewController: UIViewController {
 
     @IBOutlet weak var fieldName: UITextField!
+    @IBOutlet weak var btnNext: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,18 @@ class CreateNameViewController: UIViewController {
     }
     
     @IBAction func namePrimaryAction(_ sender: Any) {
+        next()
+    }
+    
+    @IBAction func nextDidTouch(_ sender: Any) {
+        next()
+    }
+    
+    @IBAction func nameDidChange(_ sender: Any) {
+        btnNext.isEnabled = (fieldName.text ?? "") != ""
+    }
+    
+    func next() {
         self.performSegue(withIdentifier: "AddPlayersSegue", sender: self)
     }
     

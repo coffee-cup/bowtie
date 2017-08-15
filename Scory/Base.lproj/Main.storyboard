@@ -272,7 +272,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player Name" id="baJ-z1-arT">
-                        <barButtonItem key="rightBarButtonItem" title="Add Score" id="Gxe-1i-3mN">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Add Score" id="Gxe-1i-3mN">
                             <connections>
                                 <action selector="addScoreDidTouch:" destination="cm4-AF-ZFq" id="04N-Ik-zrC"/>
                             </connections>
@@ -306,6 +306,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
+                                    <action selector="nameDidChange:" destination="1Bt-fS-WXE" eventType="editingChanged" id="uhd-Rf-wIr"/>
                                     <action selector="namePrimaryAction:" destination="1Bt-fS-WXE" eventType="primaryActionTriggered" id="49u-C0-XFf"/>
                                 </connections>
                             </textField>
@@ -317,7 +318,15 @@
                             <constraint firstItem="PWl-ZM-AUU" firstAttribute="centerY" secondItem="IU3-RN-9HP" secondAttribute="centerY" constant="-36" id="d81-KN-rAJ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Create" id="nmA-am-sel">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Next" id="MaM-Db-tSa">
+                            <connections>
+                                <action selector="nextDidTouch:" destination="1Bt-fS-WXE" id="bbg-El-2vG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnNext" destination="MaM-Db-tSa" id="XYk-eS-4Jn"/>
                         <outlet property="fieldName" destination="PWl-ZM-AUU" id="VrK-DO-cyo"/>
                         <segue destination="zfO-NS-Mc7" kind="show" identifier="AddPlayersSegue" id="42j-cS-4El"/>
                     </connections>
@@ -404,7 +413,7 @@
                             <constraint firstAttribute="trailing" secondItem="v9g-3h-JhI" secondAttribute="trailing" id="xh5-f3-rso"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="96g-Fv-IuS">
+                    <navigationItem key="navigationItem" title="Add Players" id="96g-Fv-IuS">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="JZx-3D-XYI">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wOf-mC-haH">
                                 <rect key="frame" x="313" y="7" width="46" height="30"/>
