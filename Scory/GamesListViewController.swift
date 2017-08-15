@@ -15,6 +15,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     
     var notificationToken: NotificationToken!
     var games = Game.all()
+    var selectedGame: Game?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +40,8 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "GameSegue" {
-            
+        if segue.identifier == "GameSegue", let gameViewController = segue.destination as? GameViewController {
+            gameViewController.game = selectedGame!
         }
     }
     
@@ -51,6 +52,8 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     // Table View Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedGame = games[indexPath.row]
+        
         performSegue(withIdentifier: "GameSegue", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
