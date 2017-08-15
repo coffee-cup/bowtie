@@ -14,6 +14,10 @@ class Player: Object {
     dynamic var name = ""
     let scores = List<Score>()
  
+    override static func primaryKey() -> String? {
+        return "id"
+    }
+    
     static func create(name: String) -> Player {
         let player = Player()
         player.name = name

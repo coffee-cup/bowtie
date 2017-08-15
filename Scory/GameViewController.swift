@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class GameViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -15,6 +16,8 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var game: Game!
     var selectedPlayer: Player?
     
+    var notificationToken: NotificationToken!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,11 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.dataSource = self
         tableView.delegate = self
+        
+        notificationToken = Store.notifier {
+            self.game = Store.get(byId: self.game.id, type: Game.self)!
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,6 +41,10 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if segue.identifier == "ScoreSegue", let scoreViewController = segue.destination as? ScoreViewController {
             scoreViewController.player = selectedPlayer!
         }
+    }
+    
+    deinit {
+        notificationToken.stop()
     }
     
     // Table View Delegate
@@ -65,10 +77,17 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let totalScore = player.scores.reduce(0) { acc, score in
             return acc + score.value
         }
+        let turnCounts = game.players.map { player in
+            return player.scores.count
+        }
+        let maxTurns = turnCounts.max() ?? 0
         
         cell.lblName.text = player.name
         cell.lblScore.text = "\(totalScore)"
         cell.lblTurns.text = "\(player.scores.count)"
+        cell.viewTurns.backgroundColor = player.scores.count < maxTurns
+            ? red
+            : purple
         
         return cell
     }

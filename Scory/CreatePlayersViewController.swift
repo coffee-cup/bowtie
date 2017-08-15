@@ -22,6 +22,7 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
         super.viewDidLoad()
 
         self.hideKeyboardWhenTappedAround()
+        fieldPlayerName.becomeFirstResponder()
         btnCreate.isEnabled = false
         
         tableView.dataSource = self

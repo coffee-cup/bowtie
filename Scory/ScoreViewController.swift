@@ -40,7 +40,12 @@ class ScoreViewController: UIViewController {
     }
     
     @IBAction func addScoreDidTouch(_ sender: Any) {
-        print(score())
+        Store.update {
+            let newScore = Score.create(value: score())
+            player.scores.append(newScore)
+            Store.realm.add(player, update: true)
+        }
+        self.navigationController?.popViewController(animated: true)
     }
     
     func score() -> Int {

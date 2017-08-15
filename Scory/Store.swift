@@ -16,6 +16,10 @@ class Store {
         return Array(realm.objects(type))
     }
     
+    static func get<T: Object>(byId id: String, type: T.Type) -> T? {
+        return realm.object(ofType: type, forPrimaryKey: id)
+    }
+    
     static func new(object: Object) {
         try! realm.write {
             realm.add(object)
