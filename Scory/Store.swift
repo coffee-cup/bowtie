@@ -12,7 +12,11 @@ import RealmSwift
 class Store {
     static let realm = try! Realm()
     
-    static func save(object: Object) {
+    static func get<T: Object>(type: T.Type) -> [T] {
+        return Array(realm.objects(type))
+    }
+    
+    static func new(object: Object) {
         try! realm.write {
             realm.add(object)
         }
@@ -24,8 +28,10 @@ class Store {
         }
     }
     
-    static func get<T: Object>(type: T.Type) -> [T] {
-        return Array(realm.objects(type))
+    static func delete(object: Object) {
+        try! realm.write {
+            realm.delete(object)
+        }
     }
     
     static func notifier(block: @escaping (() -> Void)) -> NotificationToken {

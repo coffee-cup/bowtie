@@ -24,7 +24,7 @@ class Game: Object {
             return ["name": name]
         }
         let game = Game(value: ["name": name, "players": playersDic])
-        Store.save(object: game)
+        Store.new(object: game)
         return game
     }
     

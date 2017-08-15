@@ -59,6 +59,16 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         return 80
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        let game = games[indexPath.row]
+        Store.delete(object: game)
+    }
+    
     // Table View Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
