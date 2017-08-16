@@ -20,7 +20,7 @@ class Game: Object {
     }
     
     func winner() -> Player? {
-        let maxPlayers = players.filter { player in
+        let maxPlayers = Array(players).filter { player in
             return player.totalScore() >= self.maxScore()
         }
         return maxPlayers.count == 1

@@ -25,19 +25,15 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.dataSource = self
         tableView.delegate = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
+        
         notificationToken = Store.notifier {
-            self.game = Store.get(byId: self.game.id, type: Game.self)
-            self.tableView.reloadData()
+            if let game = Store.get(byId: self.game.id, type: Game.self) {
+                self.game = game
+                self.tableView.reloadData()
+            }
         }
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        notificationToken.stop()
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
