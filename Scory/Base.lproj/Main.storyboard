@@ -55,10 +55,31 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n1Z-ai-6Ef">
                                                     <rect key="frame" x="20" y="9" width="60" height="60"/>
-                                                    <color key="backgroundColor" red="0.27450980390000002" green="1" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bowtie" translatesAutoresizingMaskIntoConstraints="NO" id="Ojj-wS-iEe">
+                                                            <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="MMh-Xk-VXx"/>
+                                                                <constraint firstAttribute="height" constant="40" id="pKj-uX-pC3"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="J" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgX-L3-tCY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.4039215686" green="0.39607843139999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Ojj-wS-iEe" firstAttribute="centerX" secondItem="n1Z-ai-6Ef" secondAttribute="centerX" id="Cou-M8-Zna"/>
+                                                        <constraint firstItem="Ojj-wS-iEe" firstAttribute="centerY" secondItem="n1Z-ai-6Ef" secondAttribute="centerY" id="EuQ-ZR-fcE"/>
+                                                        <constraint firstAttribute="trailing" secondItem="QgX-L3-tCY" secondAttribute="trailing" id="KPo-oF-M9w"/>
                                                         <constraint firstAttribute="height" constant="60" id="Nrk-aC-3PP"/>
+                                                        <constraint firstItem="QgX-L3-tCY" firstAttribute="top" secondItem="n1Z-ai-6Ef" secondAttribute="top" id="Swi-ub-gyb"/>
                                                         <constraint firstAttribute="width" constant="60" id="a9j-fb-6pn"/>
+                                                        <constraint firstItem="QgX-L3-tCY" firstAttribute="leading" secondItem="n1Z-ai-6Ef" secondAttribute="leading" id="duc-Eb-whg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="QgX-L3-tCY" secondAttribute="bottom" id="kep-uf-pFq"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHO-tR-xlX">
@@ -98,8 +119,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="imageTie" destination="Ojj-wS-iEe" id="vOS-lX-KAS"/>
                                             <outlet property="lblGameName" destination="vxQ-aK-9Eo" id="0Ax-49-pWB"/>
                                             <outlet property="lblPlayers" destination="341-d6-CTL" id="KZf-P7-obI"/>
+                                            <outlet property="lblWinner" destination="QgX-L3-tCY" id="KOD-mV-3eC"/>
                                             <outlet property="viewWinner" destination="n1Z-ai-6Ef" id="g9k-9n-EQh"/>
                                         </connections>
                                     </tableViewCell>
@@ -437,4 +460,7 @@
             <point key="canvasLocation" x="3328.8000000000002" y="-412.44377811094455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bowtie" width="125" height="66"/>
+    </resources>
 </document>

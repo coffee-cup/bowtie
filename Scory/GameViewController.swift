@@ -25,11 +25,17 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         notificationToken = Store.notifier {
-            self.game = Store.get(byId: self.game.id, type: Game.self)!
+            self.game = Store.get(byId: self.game.id, type: Game.self)
             self.tableView.reloadData()
         }
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        notificationToken.stop()
     }
 
     override func didReceiveMemoryWarning() {
@@ -74,18 +80,11 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! PlayerTableViewCell
         
         let player = game.players[indexPath.row]
-        let totalScore = player.scores.reduce(0) { acc, score in
-            return acc + score.value
-        }
-        let turnCounts = game.players.map { player in
-            return player.scores.count
-        }
-        let maxTurns = turnCounts.max() ?? 0
         
         cell.lblName.text = player.name
-        cell.lblScore.text = "\(totalScore)"
-        cell.lblTurns.text = "\(player.scores.count)"
-        cell.viewTurns.backgroundColor = player.scores.count < maxTurns
+        cell.lblScore.text = "\(player.totalScore())"
+        cell.lblTurns.text = "\(player.numTurns())"
+        cell.viewTurns.backgroundColor = player.scores.count < game.maxTurns()
             ? red
             : purple
         

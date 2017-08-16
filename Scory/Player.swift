@@ -18,6 +18,16 @@ class Player: Object {
         return "id"
     }
     
+    func totalScore() -> Int {
+        return scores.reduce(0) { acc, score in
+            return acc + score.value
+        }
+    }
+    
+    func numTurns() -> Int {
+        return scores.count
+    }
+    
     static func create(name: String) -> Player {
         let player = Player()
         player.name = name

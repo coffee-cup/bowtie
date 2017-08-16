@@ -19,6 +19,29 @@ class Game: Object {
         return "id"
     }
     
+    func winner() -> Player? {
+        let maxPlayers = players.filter { player in
+            return player.totalScore() >= self.maxScore()
+        }
+        return maxPlayers.count == 1
+            ? maxPlayers[0]
+            : nil
+    }
+    
+    func maxScore() -> Int {
+        let scores = players.map { player in
+            return player.totalScore()
+        }
+        return scores.max() ?? 0
+    }
+    
+    func maxTurns() -> Int {
+        let totalTurns = players.map { player in
+            return player.numTurns()
+        }
+        return totalTurns.max() ?? 0
+    }
+    
     static func create(name: String, playerNames: [String]) -> Game {
         let playersDic = playerNames.map() { name in
             return ["name": name]
