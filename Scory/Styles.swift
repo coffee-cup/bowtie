@@ -8,7 +8,7 @@
 
 import UIKit
 
-let darkText = UIColor(hex: 0x333333)
-let dimText = UIColor(hex: 0xC8C7CC)
-let purple = UIColor(hex: 0x6765F8)
-let red = UIColor(hex: 0xF86565)
+let darkText = UIColor(hexString: "333333")
+let dimText = UIColor(hexString: "C8C7CC")
+let purple = UIColor(hexString: "6765F8")
+let red = UIColor(hexString: "F86565")

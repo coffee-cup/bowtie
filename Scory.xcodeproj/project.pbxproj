@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C0A72FE1F44133E00A98642 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0A72FD1F44133E00A98642 /* String.swift */; };
 		9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */; };
 		9C0EAEBF1F416362008D4CF3 /* CreateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */; };
 		9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */; };
@@ -52,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9C0A72FD1F44133E00A98642 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesTableViewCell.swift; sourceTree = "<group>"; };
 		9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNameViewController.swift; sourceTree = "<group>"; };
 		9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlayersViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */,
 				9CADE22C1F42E5F80039CFE5 /* UIColor.swift */,
+				9C0A72FD1F44133E00A98642 /* String.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
 				9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */,
 				9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */,
+				9C0A72FE1F44133E00A98642 /* String.swift in Sources */,
 				9C760D691EC655F20000D3B0 /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

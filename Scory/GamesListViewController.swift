@@ -91,6 +91,14 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         cell.lblGameName.text = game.name
         cell.lblPlayers.text = playerNames.joined(separator: ", ")
         
+        if let winner = game.winner() {
+            cell.setTie(isTie: false)
+            cell.viewWinner.backgroundColor = winner.colour
+            cell.lblWinner.text = String(winner.name.characters.first!)
+        } else {
+            cell.setTie(isTie: true)
+        }
+        
         return cell
     }
     

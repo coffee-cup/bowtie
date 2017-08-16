@@ -70,7 +70,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.4039215686" green="0.39607843139999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="Ojj-wS-iEe" firstAttribute="centerX" secondItem="n1Z-ai-6Ef" secondAttribute="centerX" id="Cou-M8-Zna"/>
                                                         <constraint firstItem="Ojj-wS-iEe" firstAttribute="centerY" secondItem="n1Z-ai-6Ef" secondAttribute="centerY" id="EuQ-ZR-fcE"/>
@@ -382,19 +382,33 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY7-Ok-2wl">
-                                                    <rect key="frame" x="20" y="24.5" width="335" height="31.5"/>
+                                                    <rect key="frame" x="110" y="24" width="245" height="32"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j65-Hq-7Ze">
+                                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="rvK-2b-aGH"/>
+                                                        <constraint firstAttribute="width" constant="80" id="vDZ-Et-HN7"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="ColourDidTouch:" destination="OQ6-ID-gYN" eventType="touchUpInside" id="qB7-Nh-XLk"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="PY7-Ok-2wl" firstAttribute="centerY" secondItem="UWR-Ch-WEO" secondAttribute="centerY" id="7AL-9I-rH8"/>
+                                                <constraint firstItem="PY7-Ok-2wl" firstAttribute="leading" secondItem="j65-Hq-7Ze" secondAttribute="trailing" constant="30" id="C03-gz-JBi"/>
+                                                <constraint firstItem="j65-Hq-7Ze" firstAttribute="leading" secondItem="UWR-Ch-WEO" secondAttribute="leading" id="Psx-x0-C9e"/>
+                                                <constraint firstItem="j65-Hq-7Ze" firstAttribute="centerY" secondItem="UWR-Ch-WEO" secondAttribute="centerY" id="Xrv-Kr-Fxa"/>
                                                 <constraint firstAttribute="trailing" secondItem="PY7-Ok-2wl" secondAttribute="trailing" constant="20" id="hna-L3-INH"/>
-                                                <constraint firstItem="PY7-Ok-2wl" firstAttribute="leading" secondItem="UWR-Ch-WEO" secondAttribute="leading" constant="20" id="kTd-al-cOv"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnColour" destination="j65-Hq-7Ze" id="JWF-BO-KOb"/>
                                             <outlet property="lblPlayerName" destination="PY7-Ok-2wl" id="rj9-6O-ZrD"/>
                                         </connections>
                                     </tableViewCell>

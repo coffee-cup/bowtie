@@ -16,7 +16,7 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
     @IBOutlet weak var btnCreate: UIButton!
     
     var gameName: String!
-    var players: [String] = []
+    var players: [NewPlayer] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,9 +24,11 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
         self.hideKeyboardWhenTappedAround()
         fieldPlayerName.becomeFirstResponder()
         btnCreate.isEnabled = false
+        btnAddPlayer.isEnabled = false
         
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 80
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +38,7 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
     
     @IBAction func playerNameDidChange(_ sender: Any) {
         if let playerName = fieldPlayerName.text {
-            btnAddPlayer.isEnabled = playerName != ""
+            btnAddPlayer.isEnabled = playerName.trim() != ""
         }
     }
     
@@ -49,19 +51,32 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
     }
     
     @IBAction func CreateDidTouch(_ sender: Any) {
-        let _ = Game.create(name: gameName, playerNames: players)
+        let _ = Game.create(name: gameName, newPlayers: players)
         navigationController?.popToRootViewController(animated: true)
     }
     
     func addPlayer() {
         if let playerName = fieldPlayerName.text {
-            players.append(playerName)
+            if playerName.trim() == "" {
+                return
+            }
+            
+            let newPlayer = NewPlayer(name: playerName, colour: UIColor.randomHue())
+            
+            players.insert(newPlayer, at: 0)
             fieldPlayerName.text = ""
             tableView.reloadData()
             
             fieldPlayerName.becomeFirstResponder()
             btnCreate.isEnabled = true
         }
+    }
+    
+    func changeNewPlayerColour(colour: UIColor, index: Int) {
+        let newPlayer = players[index]
+        players.remove(at: index)
+        players.insert(NewPlayer(name: newPlayer.name, colour: colour), at: index)
+        tableView.reloadData()
     }
     
     // Table View Delegate
@@ -87,8 +102,13 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddPlayerCell") as! AddPlayerTableViewCell
         
-        let playerName = players[indexPath.row]
-        cell.lblPlayerName.text = playerName
+        let newPlayer = players[indexPath.row]
+        cell.lblPlayerName.text = newPlayer.name
+        cell.btnColour.backgroundColor = newPlayer.colour
+        
+        cell.colourChangeCallback = { colour in
+            self.changeNewPlayerColour(colour: colour, index: indexPath.row)
+        }
         
         return cell
     }

@@ -6,13 +6,18 @@
 //  Copyright © 2017 Jake Runzer. All rights reserved.
 //
 
-import Foundation
+import UIKit
 import RealmSwift
 
 class Player: Object {
     dynamic var id = UUID().uuidString
     dynamic var name = ""
+    dynamic var colourString = ""
     let scores = List<Score>()
+    
+    var colour: UIColor {
+        return UIColor(hexString: colourString)
+    }
  
     override static func primaryKey() -> String? {
         return "id"
@@ -28,9 +33,15 @@ class Player: Object {
         return scores.count
     }
     
-    static func create(name: String) -> Player {
+    static func create(name: String, colour: String) -> Player {
         let player = Player()
         player.name = name
+        player.colourString = colour
         return player
     }
+}
+
+struct NewPlayer {
+    var name: String!
+    var colour: UIColor!
 }

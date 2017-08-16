@@ -29,22 +29,18 @@ class Game: Object {
     }
     
     func maxScore() -> Int {
-        let scores = players.map { player in
-            return player.totalScore()
-        }
+        let scores = players.map { $0.totalScore() }
         return scores.max() ?? 0
     }
     
     func maxTurns() -> Int {
-        let totalTurns = players.map { player in
-            return player.numTurns()
-        }
+        let totalTurns = players.map { $0.numTurns() }
         return totalTurns.max() ?? 0
     }
     
-    static func create(name: String, playerNames: [String]) -> Game {
-        let playersDic = playerNames.map() { name in
-            return ["name": name]
+    static func create(name: String, newPlayers: [NewPlayer]) -> Game {
+        let playersDic = newPlayers.map() { newPlayer in
+            return ["name": newPlayer.name, "colourString": newPlayer.colour.toHexString()]
         }
         let game = Game(value: ["name": name, "players": playersDic])
         Store.new(object: game)

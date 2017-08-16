@@ -11,10 +11,12 @@ import UIKit
 class AddPlayerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblPlayerName: UILabel!
+    @IBOutlet weak var btnColour: UIButton!
+    
+    var colourChangeCallback: ((UIColor) -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,4 +25,17 @@ class AddPlayerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func ColourDidTouch(_ sender: Any) {
+        changeColour()
+    }
+    
+    func changeColour() {
+        let randomColour = UIColor.randomHue()
+        
+        UIView.animate(withDuration: 0.250, animations: {
+            self.btnColour.backgroundColor = randomColour
+        })
+        
+        colourChangeCallback?(randomColour)
+    }
 }
