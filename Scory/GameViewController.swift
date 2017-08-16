@@ -13,7 +13,9 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     @IBOutlet weak var tableView: UITableView!
     
+    var gameId: String!
     var game: Game!
+    
     var selectedPlayer: Player?
     
     var notificationToken: NotificationToken!
@@ -27,7 +29,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         
         notificationToken = Store.notifier {
-            if let game = Store.get(byId: self.game.id, type: Game.self) {
+            if let game = Store.get(byId: self.gameId, type: Game.self) {
                 self.game = game
                 self.tableView.reloadData()
             }

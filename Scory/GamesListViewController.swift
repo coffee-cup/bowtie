@@ -42,6 +42,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "GameSegue", let gameViewController = segue.destination as? GameViewController {
             gameViewController.game = selectedGame!
+            gameViewController.gameId = selectedGame!.id
         }
     }
     
