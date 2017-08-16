@@ -47,6 +47,6 @@ extension UIColor {
     
     static func randomHue() -> UIColor {
         let hue = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
-        return UIColor(hue: hue, saturation: 1, brightness: 1, alpha: 1)
+        return UIColor(hue: hue, saturation: 0.6, brightness: 1, alpha: 1)
     }
 }

@@ -79,6 +79,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.lblName.text = player.name
         cell.lblScore.text = "\(player.totalScore())"
+        cell.viewScore.backgroundColor = player.colour
         cell.lblTurns.text = "\(player.numTurns())"
         cell.viewTurns.backgroundColor = player.scores.count < game.maxTurns()
             ? red

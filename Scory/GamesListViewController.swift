@@ -67,7 +67,6 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        
         let game = games[indexPath.row]
         Store.delete(object: game)
     }
@@ -97,6 +96,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
             cell.lblWinner.text = String(winner.name.characters.first!)
         } else {
             cell.setTie(isTie: true)
+            cell.viewWinner.backgroundColor = grey
         }
         
         return cell

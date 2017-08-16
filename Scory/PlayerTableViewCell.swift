@@ -12,6 +12,7 @@ class PlayerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblScore: UILabel!
+    @IBOutlet weak var viewScore: UIView!
     @IBOutlet weak var viewTurns: UIView!
     @IBOutlet weak var lblTurns: UILabel!
     

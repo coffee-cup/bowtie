@@ -20,7 +20,6 @@ class GamesTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         
-        viewWinner.layer.cornerRadius = 4
         setTie(isTie: true)
     }
 
