@@ -22,8 +22,8 @@ class ScoreViewController: UIViewController {
         navigationItem.title = player.name
         
         fieldScore.becomeFirstResponder()
-        btnNegative.setTitleColor(darkText, for: .selected)
-        btnNegative.setTitleColor(dimText, for: .normal)
+        btnNegative.setTitleColor(Styles.darkText, for: .selected)
+        btnNegative.setTitleColor(Styles.dimText, for: .normal)
     }
 
     override func didReceiveMemoryWarning() {

@@ -82,8 +82,8 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.viewScore.backgroundColor = player.colour
         cell.lblTurns.text = "\(player.numTurns())"
         cell.viewTurns.backgroundColor = player.scores.count < game.maxTurns()
-            ? red
-            : purple
+            ? Styles.red
+            : Styles.purple
         
         return cell
     }

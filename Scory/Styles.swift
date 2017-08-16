@@ -8,8 +8,10 @@
 
 import UIKit
 
-let darkText = UIColor(hexString: "333333")
-let dimText = UIColor(hexString: "C8C7CC")
-let purple = UIColor(hexString: "6765F8")
-let red = UIColor(hexString: "F86565")
-let grey = UIColor(hexString: "E7E7E7")
+class Styles {
+    static let darkText = UIColor(hexString: "333333")
+    static let dimText = UIColor(hexString: "C8C7CC")
+    static let purple = UIColor(hexString: "6765F8")
+    static let red = UIColor(hexString: "F86565")
+    static let grey = UIColor(hexString: "E7E7E7")
+}

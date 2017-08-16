@@ -96,7 +96,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
             cell.lblWinner.text = String(winner.name.characters.first!)
         } else {
             cell.setTie(isTie: true)
-            cell.viewWinner.backgroundColor = grey
+            cell.viewWinner.backgroundColor = Styles.grey
         }
         
         return cell
