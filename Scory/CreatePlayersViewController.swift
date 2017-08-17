@@ -103,8 +103,7 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: "AddPlayerCell") as! AddPlayerTableViewCell
         
         let newPlayer = players[indexPath.row]
-        cell.lblPlayerName.text = newPlayer.name
-        cell.btnColour.backgroundColor = newPlayer.colour
+        cell.set(newPlayer: newPlayer)
         
         cell.colourChangeCallback = { colour in
             self.changeNewPlayerColour(colour: colour, index: indexPath.row)

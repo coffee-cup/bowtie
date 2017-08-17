@@ -15,6 +15,12 @@ class Game: Object {
     dynamic var date = Date()
     let players = List<Player>()
     
+    var formatedDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        return dateFormatter.string(from: date)
+    }
+    
     override static func primaryKey() -> String? {
         return "id"
     }

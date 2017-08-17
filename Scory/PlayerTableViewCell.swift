@@ -27,5 +27,15 @@ class PlayerTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func set(player: Player, game: Game) {
+        lblName.text = player.name
+        lblScore.text = "\(player.totalScore())"
+        viewScore.backgroundColor = player.colour
+        lblTurns.text = "\(player.numTurns())"
+        viewTurns.backgroundColor = player.scores.count < game.maxTurns()
+            ? Styles.red
+            : Styles.purple
+    }
 
 }

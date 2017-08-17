@@ -38,4 +38,9 @@ class AddPlayerTableViewCell: UITableViewCell {
         
         colourChangeCallback?(randomColour)
     }
+    
+    func set(newPlayer: NewPlayer) {
+        lblPlayerName.text = newPlayer.name
+        btnColour.backgroundColor = newPlayer.colour
+    }
 }

@@ -78,14 +78,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! PlayerTableViewCell
         
         let player = game.players[indexPath.row]
-        
-        cell.lblName.text = player.name
-        cell.lblScore.text = "\(player.totalScore())"
-        cell.viewScore.backgroundColor = player.colour
-        cell.lblTurns.text = "\(player.numTurns())"
-        cell.viewTurns.backgroundColor = player.scores.count < game.maxTurns()
-            ? Styles.red
-            : Styles.purple
+        cell.set(player: player, game: game)
         
         return cell
     }

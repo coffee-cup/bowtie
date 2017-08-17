@@ -9,7 +9,7 @@
 import UIKit
 
 class Styles {
-    static let darkText = UIColor(hexString: "333333")
+    static let darkText = UIColor(hexString: "4A4A4A")
     static let dimText = UIColor(hexString: "C8C7CC")
     static let purple = UIColor(hexString: "6765F8")
     static let red = UIColor(hexString: "F86565")
