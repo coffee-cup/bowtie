@@ -54,6 +54,7 @@ class Game: Object {
     }
     
     static func all() -> [Game] {
-        return Store.get(type: Game.self)
+        return Store.get(type: Game.self, order: "date", ascending: false)
+//        return Store.get(type: Game.self)
     }
 }

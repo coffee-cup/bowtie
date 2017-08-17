@@ -12,8 +12,12 @@ import RealmSwift
 class Store {
     static let realm = try! Realm()
     
-    static func get<T: Object>(type: T.Type) -> [T] {
-        return Array(realm.objects(type))
+    static func get<T: Object>(type: T.Type, order: String? = nil, ascending: Bool = true) -> [T] {
+        var result = realm.objects(type)
+        if let order = order {
+            result = result.sorted(byKeyPath: order, ascending: ascending)
+        }
+        return Array(result)
     }
     
     static func get<T: Object>(byId id: String, type: T.Type) -> T? {
