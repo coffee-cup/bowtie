@@ -89,6 +89,15 @@ class CreatePlayersViewController: UIViewController, UITableViewDataSource, UITa
         return 80
     }
     
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        players.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
+    
     // Table View Datasource
     
     func numberOfSections(in tableView: UITableView) -> Int {
