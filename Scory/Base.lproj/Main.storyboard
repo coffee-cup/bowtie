@@ -176,7 +176,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4Um-HW-MBc">
-                                <rect key="frame" x="0.0" y="116" width="375" height="551"/>
+                                <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="80" id="ret-lw-3y2" customClass="PlayerTableViewCell" customModule="Scory" customModuleProvider="target">
@@ -255,17 +255,34 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ojD-Tl-MdX">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0pH-2M-elp"/>
+                                    <barButtonItem title="Name" id="Iuy-Q3-ffy">
+                                        <connections>
+                                            <action selector="sortDidTouch:" destination="3y3-d2-maI" id="jfH-hB-0Zk"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Um-HW-MBc" firstAttribute="leading" secondItem="0Ae-eb-1ao" secondAttribute="leading" id="7rZ-z3-I0U"/>
+                            <constraint firstItem="2QE-9Z-T6J" firstAttribute="top" secondItem="ojD-Tl-MdX" secondAttribute="bottom" id="AfE-eX-nly"/>
+                            <constraint firstItem="ojD-Tl-MdX" firstAttribute="leading" secondItem="0Ae-eb-1ao" secondAttribute="leading" id="Dn2-eZ-GyC"/>
                             <constraint firstItem="4Um-HW-MBc" firstAttribute="top" secondItem="Lis-3i-JwS" secondAttribute="bottom" id="Ds0-PW-tvv"/>
                             <constraint firstAttribute="trailing" secondItem="4Um-HW-MBc" secondAttribute="trailing" id="Kzx-4b-erz"/>
-                            <constraint firstItem="2QE-9Z-T6J" firstAttribute="top" secondItem="4Um-HW-MBc" secondAttribute="bottom" id="zYN-Ve-lKS"/>
+                            <constraint firstItem="ojD-Tl-MdX" firstAttribute="top" secondItem="4Um-HW-MBc" secondAttribute="bottom" id="gyL-Bl-sGE"/>
+                            <constraint firstAttribute="trailing" secondItem="ojD-Tl-MdX" secondAttribute="trailing" id="swb-sm-73E"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Game" id="mQG-sh-QgC"/>
+                    <navigationItem key="navigationItem" title="Game" id="mQG-sh-QgC">
+                        <barButtonItem key="rightBarButtonItem" id="g1J-f2-8IV"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnSort" destination="Iuy-Q3-ffy" id="gya-7j-6SB"/>
                         <outlet property="tableView" destination="4Um-HW-MBc" id="b3L-b8-l8X"/>
                         <segue destination="cm4-AF-ZFq" kind="show" identifier="ScoreSegue" id="9bf-uj-PB9"/>
                     </connections>

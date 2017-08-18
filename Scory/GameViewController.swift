@@ -9,12 +9,20 @@
 import UIKit
 import RealmSwift
 
+enum SortOption: String {
+    case Name
+    case Score
+    case Turns
+}
+
 class GameViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var btnSort: UIBarButtonItem!
     
     var gameId: String!
     var game: Game!
+    var players: [Player] = []
     
     var selectedPlayer: Player?
     
@@ -34,6 +42,8 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.tableView.reloadData()
             }
         }
+        
+        sort(by: .Score)
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,11 +60,17 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     deinit {
         notificationToken.stop()
     }
+
+    func set(game: Game) {
+        self.game = game
+        self.gameId = game.id
+        self.players = Array(game.players)
+    }
     
     // Table View Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlayer = game.players[indexPath.row]
+        selectedPlayer = players[indexPath.row]
         
         performSegue(withIdentifier: "ScoreSegue", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -71,19 +87,58 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return game.players.count
+        return players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell") as! PlayerTableViewCell
         
-        let player = game.players[indexPath.row]
+        let player = players[indexPath.row]
         cell.set(player: player, game: game)
         
         return cell
     }
     
-
+    // Sorting
+    
+    func sort(by sortOption: SortOption) {
+        btnSort.title = sortOption.rawValue
+        
+        switch sortOption {
+        case .Name:
+            players = players.sorted(by: { $0.name < $1.name })
+        case .Score:
+            players = players.sorted(by: { $0.totalScore() > $1.totalScore() })
+        case .Turns:
+            players = players.sorted(by: { $0.numTurns() < $1.numTurns() })
+        }
+        
+        tableView.reloadData()
+    }
+    
+    @IBAction func sortDidTouch(_ sender: Any) {
+        let sortMenu = UIAlertController(title: "Sort", message: nil, preferredStyle: .actionSheet)
+        
+        let nameAction = UIAlertAction(title: SortOption.Name.rawValue, style: .default, handler: { action in
+            self.sort(by: .Name)
+        })
+        let scoreAction = UIAlertAction(title: SortOption.Score.rawValue, style: .default, handler: { action in
+            self.sort(by: .Score)
+        })
+        let turnsAction = UIAlertAction(title: SortOption.Turns.rawValue, style: .default, handler: { action in
+            self.sort(by: .Turns)
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        sortMenu.addAction(nameAction)
+        sortMenu.addAction(scoreAction)
+        sortMenu.addAction(turnsAction)
+        sortMenu.addAction(cancelAction)
+        
+        self.present(sortMenu, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -95,3 +150,4 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     */
 
 }
+
