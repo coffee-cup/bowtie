@@ -33,11 +33,11 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         notificationToken = Store.notifier {
             if let game = Store.get(byId: self.gameId, type: Game.self) {
                 self.game = game
-                self.tableView.reloadData()
+                self.sort()
             }
         }
         
-        sort(by: Settings.sort)
+        sort()
     }
     
     override func didReceiveMemoryWarning() {
@@ -95,7 +95,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     // Sorting
     
-    func sort(by sortOption: SortOption) {
+    func sort(by sortOption: SortOption = Settings.sort) {
         btnSort.title = sortOption.rawValue
         Settings.sort = sortOption
         
