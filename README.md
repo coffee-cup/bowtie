@@ -4,11 +4,10 @@
 
 An iOS score keeping app.
 
-![](http://i.imgur.com/NyXKWTW.png)
+![](http://i.imgur.com/d5I5Sos.png)
 
 ## Development
 
 1. Clone repo
 2. `carthage update`
 3. Open `Scory.xcodeproj`
-
