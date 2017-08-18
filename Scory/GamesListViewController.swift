@@ -21,7 +21,10 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         super.viewDidLoad()
 
         // Large title
-        navigationController?.navigationBar.prefersLargeTitles = true
+        if #available(iOS 11.0, *) {
+            navigationController?.navigationBar.prefersLargeTitles = true
+        }
+        
         navigationController?.navigationBar.barTintColor = UIColor.white
         
         notificationToken = Store.notifier {
