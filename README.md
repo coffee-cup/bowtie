@@ -1,6 +1,10 @@
 # Bowtie
 
+![](https://raw.githubusercontent.com/coffee-cup/bowtie/master/Scory/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60%402x.png)
+
 An iOS score keeping app.
+
+![](http://i.imgur.com/NyXKWTW.png)
 
 ## Development
 
