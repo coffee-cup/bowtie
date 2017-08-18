@@ -9,12 +9,6 @@
 import UIKit
 import RealmSwift
 
-enum SortOption: String {
-    case Name
-    case Score
-    case Turns
-}
-
 class GameViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
@@ -43,7 +37,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         }
         
-        sort(by: .Score)
+        sort(by: Settings.sort)
     }
     
     override func didReceiveMemoryWarning() {
@@ -103,6 +97,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func sort(by sortOption: SortOption) {
         btnSort.title = sortOption.rawValue
+        Settings.sort = sortOption
         
         switch sortOption {
         case .Name:

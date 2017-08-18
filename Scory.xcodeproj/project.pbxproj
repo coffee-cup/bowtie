@@ -33,6 +33,7 @@
 		9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB4170A1EC07E2B00D6496E /* Player.swift */; };
 		9CCFBAE51F419FC700FAECC9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFBAE11F41949F00FAECC9 /* Realm.framework */; };
 		9CCFBAE61F419FC700FAECC9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CCFBAE21F41949F00FAECC9 /* RealmSwift.framework */; };
+		9CD99E9D1F46D4CC0061E0F8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD99E9C1F46D4CC0061E0F8 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		9CB4170A1EC07E2B00D6496E /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9CCFBAE11F41949F00FAECC9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
 		9CCFBAE21F41949F00FAECC9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
+		9CD99E9C1F46D4CC0061E0F8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				9C0EAEC01F41636F008D4CF3 /* ViewControllers */,
 				9C304E281F42C19E0068752A /* Store.swift */,
 				9CADE22E1F42E6070039CFE5 /* Styles.swift */,
+				9CD99E9C1F46D4CC0061E0F8 /* Settings.swift */,
 			);
 			path = Scory;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
 				9C304E291F42C19E0068752A /* Store.swift in Sources */,
 				9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */,
+				9CD99E9D1F46D4CC0061E0F8 /* Settings.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
 				9C0EAEC21F4163B9008D4CF3 /* CreatePlayersViewController.swift in Sources */,
 				9CB4170B1EC07E2B00D6496E /* Player.swift in Sources */,
