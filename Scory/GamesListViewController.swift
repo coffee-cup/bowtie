@@ -25,7 +25,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
             navigationController?.navigationBar.prefersLargeTitles = true
         }
         
-        navigationController?.navigationBar.barTintColor = UIColor.white
+//        navigationController?.navigationBar.barTintColor = UIColor.white
         
         notificationToken = Store.notifier {
             self.games = Game.all()
