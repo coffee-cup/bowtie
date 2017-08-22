@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Score: Object {
-    dynamic var value: Int = 0
+    @objc dynamic var value: Int = 0
     
     static func create(value: Int) -> Score {
         let score = Score()

@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 
 class Game: Object {
-    dynamic var id = UUID().uuidString
-    dynamic var name = ""
-    dynamic var date = Date()
+    @objc dynamic var id = UUID().uuidString
+    @objc dynamic var name = ""
+    @objc dynamic var date = Date()
     let players = List<Player>()
     
     var formatedDate: String {

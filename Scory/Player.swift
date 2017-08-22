@@ -10,9 +10,9 @@ import UIKit
 import RealmSwift
 
 class Player: Object {
-    dynamic var id = UUID().uuidString
-    dynamic var name = ""
-    dynamic var colourString = ""
+    @objc dynamic var id = UUID().uuidString
+    @objc dynamic var name = ""
+    @objc dynamic var colourString = ""
     let scores = List<Score>()
     
     var colour: UIColor {
