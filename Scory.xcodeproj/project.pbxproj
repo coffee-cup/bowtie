@@ -69,7 +69,7 @@
 		9CADE22A1F42DDE60039CFE5 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 		9CADE22C1F42E5F80039CFE5 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		9CADE22E1F42E6070039CFE5 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		9CB416C51EC06F6700D6496E /* Scory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scory.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CB416C51EC06F6700D6496E /* Bowtie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bowtie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CB416C81EC06F6700D6496E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CB416CF1EC06F6700D6496E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9CB416D11EC06F6700D6496E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 		9CB416C61EC06F6700D6496E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9CB416C51EC06F6700D6496E /* Scory.app */,
+				9CB416C51EC06F6700D6496E /* Bowtie.app */,
 				9CB416DB1EC06F6700D6496E /* ScoryTests.xctest */,
 				9CB416E61EC06F6700D6496E /* ScoryUITests.xctest */,
 			);
@@ -253,7 +253,7 @@
 			);
 			name = Scory;
 			productName = Scory;
-			productReference = 9CB416C51EC06F6700D6496E /* Scory.app */;
+			productReference = 9CB416C51EC06F6700D6496E /* Bowtie.app */;
 			productType = "com.apple.product-type.application";
 		};
 		9CB416DA1EC06F6700D6496E /* ScoryTests */ = {
@@ -584,8 +584,8 @@
 				INFOPLIST_FILE = Scory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.Scory;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.bowtie;
+				PRODUCT_NAME = Bowtie;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -602,8 +602,8 @@
 				INFOPLIST_FILE = Scory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.Scory;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = xyz.jakerunzer.bowtie;
+				PRODUCT_NAME = Bowtie;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
