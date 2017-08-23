@@ -15,6 +15,7 @@ class ScoreViewController: UIViewController {
     @IBOutlet weak var btnAddScore: UIBarButtonItem!
     
     var player: Player!
+    var game: Game!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +41,13 @@ class ScoreViewController: UIViewController {
     }
     
     @IBAction func addScoreDidTouch(_ sender: Any) {
-        Store.update {
-            let newScore = Score.create(value: score())
-            player.scores.append(newScore)
-            Store.realm.add(player, update: true)
-        }
+        Player.addScore(game: game, player: player, value: score())
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func set(game: Game, player: Player) {
+        self.game = game
+        self.player = player
     }
     
     func score() -> Int {

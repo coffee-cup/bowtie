@@ -71,7 +71,7 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         let game = games[indexPath.row]
-        Store.delete(object: game)
+        Game.delete(game: game)
     }
     
     // Table View Datasource

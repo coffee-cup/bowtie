@@ -50,7 +50,15 @@ class Game: Object {
         }
         let game = Game(value: ["name": name, "players": playersDic])
         Store.new(object: game)
+        
+        Analytics.createGame(gameId: game.id, name: name)
+        
         return game
+    }
+    
+    static func delete(game: Game) {
+        Analytics.deleteGame(gameId: game.id, name: game.name)
+        Store.delete(object: game)
     }
     
     static func all() -> [Game] {

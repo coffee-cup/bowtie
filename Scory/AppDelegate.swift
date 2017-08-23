@@ -22,7 +22,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         print("\(Realm.Configuration.defaultConfiguration.fileURL!)")
         
-        Fabric.with([Crashlytics.self])
+        #if DEBUG
+            print("DEBUG MODE")
+        #else
+            Fabric.with([Crashlytics.self])
+        #endif
         
         return true
     }

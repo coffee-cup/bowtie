@@ -39,6 +39,15 @@ class Player: Object {
         player.colourString = colour
         return player
     }
+    
+    static func addScore(game: Game, player: Player, value: Int) {
+        Store.update {
+            let newScore = Score.create(value: value)
+            player.scores.append(newScore)
+            Store.realm.add(player, update: true)
+            Analytics.addScore(gameId: game.id, score: value)
+        }
+    }
 }
 
 struct NewPlayer {

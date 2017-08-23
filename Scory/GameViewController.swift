@@ -47,7 +47,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ScoreSegue", let scoreViewController = segue.destination as? ScoreViewController {
-            scoreViewController.player = selectedPlayer!
+            scoreViewController.set(game: game, player: selectedPlayer!)
         }
     }
     
