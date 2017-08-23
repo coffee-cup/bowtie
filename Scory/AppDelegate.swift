@@ -8,6 +8,8 @@
 
 import UIKit
 import RealmSwift
+import Fabric
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         print("\(Realm.Configuration.defaultConfiguration.fileURL!)")
+        
+        Fabric.with([Crashlytics.self])
         
         return true
     }

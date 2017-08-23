@@ -17,6 +17,8 @@
 		9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */; };
 		9C304E291F42C19E0068752A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C304E281F42C19E0068752A /* Store.swift */; };
 		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
+		9CA3F7141F4D769C008AE32D /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA3F7121F4D763A008AE32D /* Crashlytics.framework */; };
+		9CA3F7151F4D769C008AE32D /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CA3F7131F4D763B008AE32D /* Fabric.framework */; };
 		9CADE2271F42DB390039CFE5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADE2261F42DB390039CFE5 /* GameViewController.swift */; };
 		9CADE2291F42DB420039CFE5 /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADE2281F42DB420039CFE5 /* ScoreViewController.swift */; };
 		9CADE22B1F42DDE60039CFE5 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CADE22A1F42DDE60039CFE5 /* PlayerTableViewCell.swift */; };
@@ -64,6 +66,8 @@
 		9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9C304E281F42C19E0068752A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9CA3F7121F4D763A008AE32D /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		9CA3F7131F4D763B008AE32D /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		9CADE2261F42DB390039CFE5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		9CADE2281F42DB420039CFE5 /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		9CADE22A1F42DDE60039CFE5 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CA3F7141F4D769C008AE32D /* Crashlytics.framework in Frameworks */,
+				9CA3F7151F4D769C008AE32D /* Fabric.framework in Frameworks */,
 				9CCFBAE51F419FC700FAECC9 /* Realm.framework in Frameworks */,
 				9CCFBAE61F419FC700FAECC9 /* RealmSwift.framework in Frameworks */,
 			);
@@ -160,6 +166,8 @@
 		9CB416BC1EC06F6700D6496E = {
 			isa = PBXGroup;
 			children = (
+				9CA3F7121F4D763A008AE32D /* Crashlytics.framework */,
+				9CA3F7131F4D763B008AE32D /* Fabric.framework */,
 				9CB416C71EC06F6700D6496E /* Scory */,
 				9CB416DE1EC06F6700D6496E /* ScoryTests */,
 				9CB416E91EC06F6700D6496E /* ScoryUITests */,
@@ -246,6 +254,7 @@
 				9CB416C21EC06F6700D6496E /* Frameworks */,
 				9CB416C31EC06F6700D6496E /* Resources */,
 				9CCFBAE01F41943000FAECC9 /* ShellScript */,
+				9CA3F70D1F4D75B3008AE32D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -372,6 +381,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9CA3F70D1F4D75B3008AE32D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PROJECT_DIR}/Fabric.framework/run\" ab09dfba68ec87866fde734a063b9f3fffb4cf7c a72dcfda26c2ccb4c7acd51b168dfa34f20c111471ffbb2a626fe5e2594d2e26";
+		};
 		9CCFBAE01F41943000FAECC9 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -587,6 +609,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Scory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -606,6 +629,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Scory/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
