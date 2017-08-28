@@ -34,7 +34,7 @@
         <!--Games-->
         <scene sceneID="DX7-5D-Ik2">
             <objects>
-                <viewController id="wtZ-jL-PT0" customClass="GamesListViewController" customModule="Scory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="wtZ-jL-PT0" customClass="GamesListViewController" customModule="Bowtie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kgC-WN-IAY"/>
                         <viewControllerLayoutGuide type="bottom" id="AXU-KI-Rzn"/>
@@ -47,7 +47,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="551"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="80" id="WsY-IH-UeD" customClass="GamesTableViewCell" customModule="Scory" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GameCell" rowHeight="80" id="WsY-IH-UeD" customClass="GamesTableViewCell" customModule="Bowtie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WsY-IH-UeD" id="dOj-bL-rXA">
@@ -166,7 +166,7 @@
         <!--Game-->
         <scene sceneID="SZa-az-1TM">
             <objects>
-                <viewController title="Game" id="3y3-d2-maI" customClass="GameViewController" customModule="Scory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Game" id="3y3-d2-maI" customClass="GameViewController" customModule="Bowtie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lis-3i-JwS"/>
                         <viewControllerLayoutGuide type="bottom" id="2QE-9Z-T6J"/>
@@ -179,7 +179,7 @@
                                 <rect key="frame" x="0.0" y="116" width="375" height="507"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="80" id="ret-lw-3y2" customClass="PlayerTableViewCell" customModule="Scory" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" rowHeight="80" id="ret-lw-3y2" customClass="PlayerTableViewCell" customModule="Bowtie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ret-lw-3y2" id="lEM-6f-WIc">
@@ -279,7 +279,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Game" id="mQG-sh-QgC">
-                        <barButtonItem key="rightBarButtonItem" id="g1J-f2-8IV"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="cHl-Ts-fnF">
+                            <connections>
+                                <action selector="editButtonDidTouch:" destination="3y3-d2-maI" id="bV6-VC-7s5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnSort" destination="Iuy-Q3-ffy" id="gya-7j-6SB"/>
@@ -294,7 +298,7 @@
         <!--Score-->
         <scene sceneID="D4B-B4-IxT">
             <objects>
-                <viewController title="Score" id="cm4-AF-ZFq" customClass="ScoreViewController" customModule="Scory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Score" id="cm4-AF-ZFq" customClass="ScoreViewController" customModule="Bowtie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ueA-tN-uOR"/>
                         <viewControllerLayoutGuide type="bottom" id="0Ei-9I-Nb3"/>
@@ -359,7 +363,7 @@
         <!--Create-->
         <scene sceneID="Tc3-Bo-fdh">
             <objects>
-                <viewController title="Create" id="1Bt-fS-WXE" customClass="CreateNameViewController" customModule="Scory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Create" id="1Bt-fS-WXE" customClass="CreateNameViewController" customModule="Bowtie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="adD-3C-HDW"/>
                         <viewControllerLayoutGuide type="bottom" id="NwM-Ql-f50"/>
@@ -406,7 +410,7 @@
         <!--Add Players-->
         <scene sceneID="88n-j4-hYV">
             <objects>
-                <viewController title="Add Players" modalPresentationStyle="currentContext" id="zfO-NS-Mc7" customClass="CreatePlayersViewController" customModule="Scory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add Players" modalPresentationStyle="currentContext" id="zfO-NS-Mc7" customClass="CreatePlayersViewController" customModule="Bowtie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="179-0c-ZqJ"/>
                         <viewControllerLayoutGuide type="bottom" id="HDT-8k-8UH"/>
@@ -416,10 +420,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4iP-Tu-C8F">
-                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
+                                <rect key="frame" x="0.0" y="216" width="375" height="451"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddPlayerCell" rowHeight="80" id="OQ6-ID-gYN" customClass="AddPlayerTableViewCell" customModule="Scory" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddPlayerCell" rowHeight="80" id="OQ6-ID-gYN" customClass="AddPlayerTableViewCell" customModule="Bowtie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OQ6-ID-gYN" id="UWR-Ch-WEO">
@@ -460,7 +464,7 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-mJ-ror">
-                                <rect key="frame" x="20" y="116" width="275" height="80"/>
+                                <rect key="frame" x="20" y="136" width="275" height="80"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
@@ -470,7 +474,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9g-3h-JhI">
-                                <rect key="frame" x="295" y="116" width="80" height="80"/>
+                                <rect key="frame" x="295" y="136" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="NRC-GZ-1QF"/>
                                     <constraint firstAttribute="height" constant="80" id="vZ0-rX-UkQ"/>

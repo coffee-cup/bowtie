@@ -33,6 +33,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         notificationToken = Store.notifier {
             if let game = Store.get(byId: self.gameId, type: Game.self) {
                 self.game = game
+                self.navigationItem.title = game.name
                 self.sort()
             }
         }
@@ -132,6 +133,28 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         sortMenu.addAction(cancelAction)
         
         self.present(sortMenu, animated: true, completion: nil)
+    }
+    
+    @IBAction func editButtonDidTouch(_ sender: Any) {
+        let editMenu = UIAlertController(title: "Change Game Name", message: nil, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: { action in
+            if let textField = editMenu.textFields?.first, let text = textField.text {
+                Store.update {
+                    self.game.name = text
+                    Store.realm.add(self.game, update: true)
+                }
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        editMenu.addTextField(configurationHandler: { textfield in
+            textfield.keyboardType = .alphabet
+        })
+        editMenu.addAction(okAction)
+        editMenu.addAction(cancelAction)
+        
+        self.present(editMenu, animated: true, completion: nil)
     }
     
     /*
