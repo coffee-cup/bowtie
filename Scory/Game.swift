@@ -51,7 +51,7 @@ class Game: Object {
         let game = Game(value: ["name": name, "players": playersDic])
         Store.new(object: game)
         
-        Analytics.createGame(gameId: game.id, name: name)
+        Analytics.createGame(gameId: game.id, name: name, numPlayers: newPlayers.count)
         
         return game
     }

@@ -10,8 +10,8 @@ import Foundation
 import Crashlytics
 
 class Analytics {
-    static func createGame(gameId: String, name: String) {
-        Answers.logCustomEvent(withName: "Create Game", customAttributes: ["game_id": gameId, "name": name])
+    static func createGame(gameId: String, name: String, numPlayers: Int) {
+        Answers.logCustomEvent(withName: "Create Game", customAttributes: ["game_id": gameId, "name": name, "num_players": numPlayers])
     }
     
     static func deleteGame(gameId: String, name: String) {
