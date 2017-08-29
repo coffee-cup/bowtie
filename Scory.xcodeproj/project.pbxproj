@@ -17,6 +17,7 @@
 		9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */; };
 		9C304E291F42C19E0068752A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C304E281F42C19E0068752A /* Store.swift */; };
 		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
+		9C7F11D41F5530C300B9E140 /* NumPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */; };
 		9C8D9D851F4E9D7A00430CB0 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8D9D831F4E9D7000430CB0 /* Crashlytics.framework */; };
 		9C8D9D861F4E9D7A00430CB0 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8D9D841F4E9D7000430CB0 /* Fabric.framework */; };
 		9CA3F7171F4D772A008AE32D /* Analytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA3F7161F4D772A008AE32D /* Analytics.swift */; };
@@ -67,6 +68,7 @@
 		9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9C304E281F42C19E0068752A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPadViewController.swift; sourceTree = "<group>"; };
 		9C8D9D831F4E9D7000430CB0 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9C8D9D841F4E9D7000430CB0 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		9CA3F7161F4D772A008AE32D /* Analytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Analytics.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 				9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */,
 				9CADE2261F42DB390039CFE5 /* GameViewController.swift */,
 				9CADE2281F42DB420039CFE5 /* ScoreViewController.swift */,
+				9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CADE2271F42DB390039CFE5 /* GameViewController.swift in Sources */,
+				9C7F11D41F5530C300B9E140 /* NumPadViewController.swift in Sources */,
 				9C0EAEC91F416F7D008D4CF3 /* AddPlayerTableViewCell.swift in Sources */,
 				9CADE2291F42DB420039CFE5 /* ScoreViewController.swift in Sources */,
 				9CB417031EC0782600D6496E /* GamesListViewController.swift in Sources */,

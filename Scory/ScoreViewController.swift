@@ -8,23 +8,31 @@
 
 import UIKit
 
-class ScoreViewController: UIViewController {
+protocol NumPadDelegate {
+    func valueChanged(value: Int)
+    func valueSubmitted(value: Int)
+}
 
-    @IBOutlet weak var fieldScore: UITextField!
+class ScoreViewController: UIViewController, NumPadDelegate {
+
     @IBOutlet weak var btnNegative: UIButton!
-    @IBOutlet weak var btnAddScore: UIBarButtonItem!
+    @IBOutlet weak var lblScore: UILabel!
     
     var player: Player!
     var game: Game!
+    
+    var numPadViewController: NumPadViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = player.name
         
-        fieldScore.becomeFirstResponder()
         btnNegative.setTitleColor(Styles.darkText, for: .selected)
         btnNegative.setTitleColor(Styles.dimText, for: .normal)
+        
+        numPadViewController = self.childViewControllers.first as? NumPadViewController
+        numPadViewController?.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,27 +40,26 @@ class ScoreViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func scoreEditingDidChange(_ sender: Any) {
-        btnAddScore.isEnabled = (fieldScore.text ?? "") != ""
-    }
-    
     @IBAction func negativeButtonDidTouch(_ sender: Any) {
         btnNegative.isSelected = !btnNegative.isSelected
     }
     
-    @IBAction func addScoreDidTouch(_ sender: Any) {
-        Player.addScore(game: game, player: player, value: score())
-        self.navigationController?.popViewController(animated: true)
+    func valueChanged(value: Int) {
+        lblScore.text = btnNegative.isSelected
+            ? "\(value * -1)"
+            : "\(value)"
     }
     
+    func valueSubmitted(value: Int) {
+        let num = btnNegative.isSelected ? value * -1 : value
+        print(num)
+//        Player.addScore(game: game, player: player, value: value)
+//        self.navigationController?.popViewController(animated: true)
+    }
+
     func set(game: Game, player: Player) {
         self.game = game
         self.player = player
-    }
-    
-    func score() -> Int {
-        let absScore = Int(fieldScore.text ?? "0") ?? 0
-        return btnNegative.isSelected ? absScore * -1 : absScore
     }
     
     /*
