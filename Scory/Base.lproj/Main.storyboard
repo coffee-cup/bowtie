@@ -376,7 +376,7 @@
                                 <rect key="frame" x="20" y="261" width="335" height="72"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES" textContentType="nickname"/>
                                 <connections>
                                     <action selector="nameDidChange:" destination="1Bt-fS-WXE" eventType="editingChanged" id="uhd-Rf-wIr"/>
                                     <action selector="namePrimaryAction:" destination="1Bt-fS-WXE" eventType="primaryActionTriggered" id="49u-C0-XFf"/>
@@ -420,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4iP-Tu-C8F">
-                                <rect key="frame" x="0.0" y="216" width="375" height="451"/>
+                                <rect key="frame" x="0.0" y="196" width="375" height="471"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddPlayerCell" rowHeight="80" id="OQ6-ID-gYN" customClass="AddPlayerTableViewCell" customModule="Bowtie" customModuleProvider="target">
@@ -464,17 +464,17 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nDo-mJ-ror">
-                                <rect key="frame" x="20" y="136" width="275" height="80"/>
+                                <rect key="frame" x="20" y="116" width="275" height="80"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done" textContentType="name"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="done" textContentType="name"/>
                                 <connections>
                                     <action selector="playerNameDidChange:" destination="zfO-NS-Mc7" eventType="editingChanged" id="ats-mR-pj6"/>
                                     <action selector="playerNamePrimaryAction:" destination="zfO-NS-Mc7" eventType="primaryActionTriggered" id="dKK-CY-JGH"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9g-3h-JhI">
-                                <rect key="frame" x="295" y="136" width="80" height="80"/>
+                                <rect key="frame" x="295" y="116" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="NRC-GZ-1QF"/>
                                     <constraint firstAttribute="height" constant="80" id="vZ0-rX-UkQ"/>
