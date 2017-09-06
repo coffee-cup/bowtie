@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13178.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09e-F8-TfY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="09e-F8-TfY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment version="4352" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13156.2"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -308,44 +307,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="En5-Q8-5FF">
-                                <rect key="frame" x="20" y="184" width="60" height="92"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="2oU-dW-jgH"/>
-                                    <constraint firstAttribute="height" constant="92" id="A1h-xm-s1b"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="120"/>
-                                <state key="normal" title="-">
-                                    <color key="titleColor" red="0.78099507093429565" green="0.77931386232376099" blue="0.80547863245010376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="negativeButtonDidTouch:" destination="cm4-AF-ZFq" eventType="touchUpInside" id="66n-Tt-dca"/>
-                                </connections>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yFL-cK-0EU">
                                 <rect key="frame" x="0.0" y="334" width="375" height="333"/>
                                 <connections>
                                     <segue destination="g28-K2-KUR" kind="embed" id="CMn-Rz-W4m"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-46-ajq">
-                                <rect key="frame" x="100" y="166" width="259" height="143.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="120"/>
-                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61D-nz-qzJ">
+                                <rect key="frame" x="0.0" y="116" width="375" height="218"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="60" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4m-46-ajq">
+                                        <rect key="frame" x="100" y="37" width="255" height="143.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="120"/>
+                                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="En5-Q8-5FF">
+                                        <rect key="frame" x="20" y="63" width="60" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="2oU-dW-jgH"/>
+                                            <constraint firstAttribute="height" constant="92" id="A1h-xm-s1b"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="120"/>
+                                        <state key="normal" title="-">
+                                            <color key="titleColor" red="0.78099507093429565" green="0.77931386232376099" blue="0.80547863245010376" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="negativeButtonDidTouch:" destination="cm4-AF-ZFq" eventType="touchUpInside" id="66n-Tt-dca"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="En5-Q8-5FF" firstAttribute="centerY" secondItem="61D-nz-qzJ" secondAttribute="centerY" id="0rq-4t-wom"/>
+                                    <constraint firstItem="g4m-46-ajq" firstAttribute="centerY" secondItem="En5-Q8-5FF" secondAttribute="centerY" id="Dyv-cH-3H8"/>
+                                    <constraint firstItem="g4m-46-ajq" firstAttribute="leading" secondItem="En5-Q8-5FF" secondAttribute="trailing" constant="20" id="WTg-dH-hrc"/>
+                                    <constraint firstAttribute="trailing" secondItem="g4m-46-ajq" secondAttribute="trailing" constant="20" id="Yzo-We-RSb"/>
+                                    <constraint firstItem="En5-Q8-5FF" firstAttribute="leading" secondItem="61D-nz-qzJ" secondAttribute="leading" constant="20" id="gzm-jO-c3i"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="61D-nz-qzJ" secondAttribute="trailing" id="4Zy-NM-QDk"/>
                             <constraint firstItem="0Ei-9I-Nb3" firstAttribute="top" secondItem="yFL-cK-0EU" secondAttribute="bottom" id="5qU-x3-rzQ"/>
+                            <constraint firstItem="yFL-cK-0EU" firstAttribute="top" secondItem="61D-nz-qzJ" secondAttribute="bottom" id="91y-ZS-GlD"/>
                             <constraint firstItem="yFL-cK-0EU" firstAttribute="height" secondItem="g79-Uv-lmH" secondAttribute="height" multiplier="0.5" id="Aea-cJ-Mcx"/>
                             <constraint firstAttribute="trailing" secondItem="yFL-cK-0EU" secondAttribute="trailing" id="R32-Gq-GCW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g4m-46-ajq" secondAttribute="trailing" id="bjD-zx-st8"/>
-                            <constraint firstItem="En5-Q8-5FF" firstAttribute="centerY" secondItem="g4m-46-ajq" secondAttribute="centerY" constant="-8" id="hMs-8O-SMD"/>
-                            <constraint firstItem="En5-Q8-5FF" firstAttribute="leading" secondItem="g79-Uv-lmH" secondAttribute="leading" constant="20" id="iJH-N2-QDN"/>
-                            <constraint firstItem="g4m-46-ajq" firstAttribute="centerY" secondItem="g79-Uv-lmH" secondAttribute="centerY" constant="-96" id="lGb-F1-T9g"/>
                             <constraint firstItem="yFL-cK-0EU" firstAttribute="leading" secondItem="g79-Uv-lmH" secondAttribute="leading" id="nDL-fs-tEe"/>
-                            <constraint firstItem="g4m-46-ajq" firstAttribute="leading" secondItem="En5-Q8-5FF" secondAttribute="trailing" constant="20" id="xIC-ts-4Jt"/>
+                            <constraint firstItem="61D-nz-qzJ" firstAttribute="top" secondItem="ueA-tN-uOR" secondAttribute="bottom" id="y4Q-Fv-EKS"/>
+                            <constraint firstItem="61D-nz-qzJ" firstAttribute="leading" secondItem="g79-Uv-lmH" secondAttribute="leading" id="yrj-d0-8xO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Player Name" id="baJ-z1-arT"/>
@@ -579,10 +590,10 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="7"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-Vh-0Vd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6L-Vh-0Vd">
                                         <rect key="frame" x="0.0" y="250" width="125" height="83.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="&lt;-"/>
+                                        <state key="normal" image="delete"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-Rw-hki">
                                         <rect key="frame" x="125" y="83.5" width="125.5" height="83.5"/>
@@ -612,7 +623,8 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-mk-yxV">
                                         <rect key="frame" x="250" y="250" width="125" height="83.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="-&gt;"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <state key="normal" title="GO"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.4039215686" green="0.39607843139999999" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -698,5 +710,6 @@
     </scenes>
     <resources>
         <image name="bowtie" width="80" height="42"/>
+        <image name="delete" width="33" height="18"/>
     </resources>
 </document>

@@ -31,6 +31,8 @@ class ScoreViewController: UIViewController, NumPadDelegate {
         btnNegative.setTitleColor(Styles.darkText, for: .selected)
         btnNegative.setTitleColor(Styles.dimText, for: .normal)
         
+        lblScore.text = "0"
+        
         numPadViewController = self.childViewControllers.first as? NumPadViewController
         numPadViewController?.delegate = self
     }
@@ -43,18 +45,16 @@ class ScoreViewController: UIViewController, NumPadDelegate {
     @IBAction func negativeButtonDidTouch(_ sender: Any) {
         btnNegative.isSelected = !btnNegative.isSelected
     }
-    
+
     func valueChanged(value: Int) {
-        lblScore.text = btnNegative.isSelected
-            ? "\(value * -1)"
-            : "\(value)"
+        lblScore.text = "\(value)"
+        lblScore.textColor = Styles.darkText
     }
     
     func valueSubmitted(value: Int) {
         let num = btnNegative.isSelected ? value * -1 : value
-        print(num)
-//        Player.addScore(game: game, player: player, value: value)
-//        self.navigationController?.popViewController(animated: true)
+        Player.addScore(game: game, player: player, value: num)
+        self.navigationController?.popViewController(animated: true)
     }
 
     func set(game: Game, player: Player) {

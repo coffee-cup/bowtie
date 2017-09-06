@@ -54,16 +54,17 @@ class NumPadViewController: UIViewController {
             btn.addTarget(self, action: #selector(numButtonDidTouch(sender:)), for: .touchUpInside)
         }
         
-        styleButton(button: btnBack)
+        btnBack.setImage(UIImage(named: "delete"), for: .normal)
+        
         btnBack.addTarget(self, action: #selector(backButtonDidTouch(sender:)), for: .touchUpInside)
         
-        styleButton(button: btnNext)
+        styleButton(button: btnNext, withFontSize: 18)
         btnNext.addTarget(self, action: #selector(nextButtonDidTouch(sender:)), for: .touchUpInside)
     }
     
-    func styleButton(button: UIButton) {
+    func styleButton(button: UIButton, withFontSize fontSize: CGFloat = 26) {
         button.setTitleColor(Styles.darkText, for: .normal)
-        button.titleLabel?.font = button.titleLabel?.font.withSize(26)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(fontSize)
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,18 +76,25 @@ class NumPadViewController: UIViewController {
         if let text = sender.titleLabel?.text {
             value = "\(value)\(text)"
         }
+        delegate?.valueChanged(value: numValue())
     }
 
     @objc func backButtonDidTouch(sender: UIButton!) {
         if value != "" {
             value = String(value[..<value.index(before: value.endIndex)])
         }
+        delegate?.valueChanged(value: numValue())
     }
     
     @objc func nextButtonDidTouch(sender: UIButton!) {
-        if let numValue = Int(value) {
-            delegate?.numberSubmitted(value: numValue)
+        delegate?.valueSubmitted(value: numValue())
+    }
+    
+    func numValue() -> Int {
+        if let num = Int(value) {
+            return num
         }
+        return 0
     }
     
     /*
