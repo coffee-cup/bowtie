@@ -150,6 +150,7 @@ class GameViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         editMenu.addTextField(configurationHandler: { textfield in
             textfield.keyboardType = .alphabet
+            textfield.autocapitalizationType = .words
         })
         editMenu.addAction(okAction)
         editMenu.addAction(cancelAction)
