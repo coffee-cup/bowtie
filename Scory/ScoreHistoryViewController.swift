@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ScoreHistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var notificationToken: NotificationToken!
     var player: Player!
+    var playerId: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,13 @@ class ScoreHistoryViewController: UIViewController, UITableViewDataSource, UITab
         tableView.delegate = self
         
         self.navigationItem.title = "\(player.name)'s Scores"
+        
+        notificationToken = Store.notifier {
+            if let player = Store.get(byId: self.playerId, type: Player.self) {
+                self.player = player
+                self.tableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,11 +38,27 @@ class ScoreHistoryViewController: UIViewController, UITableViewDataSource, UITab
         // Dispose of any resources that can be recreated.
     }
     
+    deinit {
+        notificationToken.stop()
+    }
+    
     func set(player: Player) {
         self.player = player
+        self.playerId = player.id
     }
     
     // Table View Delegate
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        let round = player.scores.count - indexPath.row - 1
+        let score = player.scores[round]
+        
+        Score.delete(score: score)
+    }
     
     // Table View Datasource
     

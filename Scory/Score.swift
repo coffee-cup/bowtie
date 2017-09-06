@@ -18,4 +18,8 @@ class Score: Object {
         
         return score
     }
+    
+    static func delete(score: Score) {
+        Store.delete(object: score)
+    }
 }
