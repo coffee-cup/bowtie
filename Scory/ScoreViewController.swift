@@ -62,6 +62,12 @@ class ScoreViewController: UIViewController, NumPadDelegate {
         self.player = player
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ScoreHistorySegue", let scoreHistoryViewController = segue.destination as? ScoreHistoryViewController {
+            scoreHistoryViewController.set(player: player)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -17,6 +17,8 @@
 		9C0EAECC1F41770B008D4CF3 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */; };
 		9C304E291F42C19E0068752A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C304E281F42C19E0068752A /* Store.swift */; };
 		9C760D691EC655F20000D3B0 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C760D681EC655F20000D3B0 /* Score.swift */; };
+		9C7C6BCD1F5FD7F100C6B21F /* ScoreHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C6BCC1F5FD7F100C6B21F /* ScoreHistoryViewController.swift */; };
+		9C7C6BCF1F5FD8AA00C6B21F /* ScoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7C6BCE1F5FD8AA00C6B21F /* ScoreTableViewCell.swift */; };
 		9C7F11D41F5530C300B9E140 /* NumPadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */; };
 		9C8D9D851F4E9D7A00430CB0 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8D9D831F4E9D7000430CB0 /* Crashlytics.framework */; };
 		9C8D9D861F4E9D7A00430CB0 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8D9D841F4E9D7000430CB0 /* Fabric.framework */; };
@@ -68,6 +70,8 @@
 		9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		9C304E281F42C19E0068752A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		9C760D681EC655F20000D3B0 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		9C7C6BCC1F5FD7F100C6B21F /* ScoreHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHistoryViewController.swift; sourceTree = "<group>"; };
+		9C7C6BCE1F5FD8AA00C6B21F /* ScoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewCell.swift; sourceTree = "<group>"; };
 		9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumPadViewController.swift; sourceTree = "<group>"; };
 		9C8D9D831F4E9D7000430CB0 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9C8D9D841F4E9D7000430CB0 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
@@ -138,12 +142,13 @@
 		9C0EAEC01F41636F008D4CF3 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9CB417021EC0782600D6496E /* GamesListViewController.swift */,
 				9C0EAEBE1F416362008D4CF3 /* CreateNameViewController.swift */,
 				9C0EAEC11F4163B9008D4CF3 /* CreatePlayersViewController.swift */,
+				9CB417021EC0782600D6496E /* GamesListViewController.swift */,
 				9CADE2261F42DB390039CFE5 /* GameViewController.swift */,
-				9CADE2281F42DB420039CFE5 /* ScoreViewController.swift */,
 				9C7F11D31F5530C300B9E140 /* NumPadViewController.swift */,
+				9C7C6BCC1F5FD7F100C6B21F /* ScoreHistoryViewController.swift */,
+				9CADE2281F42DB420039CFE5 /* ScoreViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -151,9 +156,10 @@
 		9C0EAEC31F4163D8008D4CF3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */,
 				9C0EAEC81F416F7D008D4CF3 /* AddPlayerTableViewCell.swift */,
+				9C0EAEB91F400B30008D4CF3 /* GamesTableViewCell.swift */,
 				9CADE22A1F42DDE60039CFE5 /* PlayerTableViewCell.swift */,
+				9C7C6BCE1F5FD8AA00C6B21F /* ScoreTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -161,9 +167,9 @@
 		9C0EAECA1F4176FB008D4CF3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */,
-				9CADE22C1F42E5F80039CFE5 /* UIColor.swift */,
 				9C0A72FD1F44133E00A98642 /* String.swift */,
+				9CADE22C1F42E5F80039CFE5 /* UIColor.swift */,
+				9C0EAECB1F41770B008D4CF3 /* UIViewController.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -432,11 +438,13 @@
 				9CADE22D1F42E5F80039CFE5 /* UIColor.swift in Sources */,
 				9C0EAEC61F41653F008D4CF3 /* KeyboardAvoiding.swift in Sources */,
 				9CA3F7171F4D772A008AE32D /* Analytics.swift in Sources */,
+				9C7C6BCF1F5FD8AA00C6B21F /* ScoreTableViewCell.swift in Sources */,
 				9C0EAEBF1F416362008D4CF3 /* CreateNameViewController.swift in Sources */,
 				9CADE22F1F42E6070039CFE5 /* Styles.swift in Sources */,
 				9C0EAEBA1F400B30008D4CF3 /* GamesTableViewCell.swift in Sources */,
 				9CB417061EC07D2A00D6496E /* Game.swift in Sources */,
 				9C304E291F42C19E0068752A /* Store.swift in Sources */,
+				9C7C6BCD1F5FD7F100C6B21F /* ScoreHistoryViewController.swift in Sources */,
 				9C0EAEC71F41653F008D4CF3 /* KeyboardDismissingView.swift in Sources */,
 				9CD99E9D1F46D4CC0061E0F8 /* Settings.swift in Sources */,
 				9CB416C91EC06F6700D6496E /* AppDelegate.swift in Sources */,
