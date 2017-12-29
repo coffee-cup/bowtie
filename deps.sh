@@ -1,1 +1,1 @@
-DEVELOPER_DIR=/Applications/Xcode-beta.app/Contents/Developer carthage bootstrap --no-use-binaries
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer carthage bootstrap
