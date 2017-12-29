@@ -98,7 +98,9 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        deleteGame(at: indexPath)
+        if editingStyle == .delete {
+            deleteGame(at: indexPath)
+        }
     }
     
     // Table View Datasource
