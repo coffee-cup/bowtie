@@ -65,4 +65,11 @@ class Game: Object {
         return Store.get(type: Game.self, order: "date", ascending: false)
 //        return Store.get(type: Game.self)
     }
+    
+    static func duplicate(game: Game) -> Game {
+        let newPlayers = Array(game.players).map { Player.toNewPlayer(player: $0) }
+        let newGame = create(name: game.name, newPlayers: newPlayers)
+        
+        return newGame
+    }
 }

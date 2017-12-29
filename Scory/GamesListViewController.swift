@@ -52,6 +52,16 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         notificationToken.stop()
     }
     
+    func deleteGame(at indexPath: IndexPath) {
+        let game = games[indexPath.row]
+        Game.delete(game: game)
+    }
+    
+    func copyGame(at indexPath: IndexPath) {
+        let game = games[indexPath.row]
+        let _ = Game.duplicate(game: game)
+    }
+    
     // Table View Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -69,9 +79,26 @@ class GamesListViewController: UIViewController, UITableViewDataSource, UITableV
         return UITableViewCellEditingStyle.delete
     }
     
+    @available(iOS 11.0, *)
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: { (_, _, success: (Bool) -> Void) in
+            self.deleteGame(at: indexPath)
+            success(true)
+        })
+        
+        let copyAction = UIContextualAction(style: .normal, title: "Copy", handler: { (_, _, success: (Bool) -> Void) in
+            self.copyGame(at: indexPath)
+            success(true)
+        })
+
+        let swipeConfig = UISwipeActionsConfiguration(actions: [deleteAction, copyAction])
+        swipeConfig.performsFirstActionWithFullSwipe = true
+        
+        return swipeConfig
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let game = games[indexPath.row]
-        Game.delete(game: game)
+        deleteGame(at: indexPath)
     }
     
     // Table View Datasource

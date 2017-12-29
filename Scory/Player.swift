@@ -48,6 +48,10 @@ class Player: Object {
             Analytics.addScore(gameId: game.id, score: value)
         }
     }
+    
+    static func toNewPlayer(player: Player) -> NewPlayer {
+        return NewPlayer(name: player.name, colour: player.colour)
+    }
 }
 
 struct NewPlayer {
